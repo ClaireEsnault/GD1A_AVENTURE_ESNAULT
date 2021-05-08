@@ -1,20 +1,21 @@
-class menu extends Phaser.Scene {
+class Menu extends Phaser.Scene {
     constructor()
 {
-        super({key: 'menu'});
+        super("Menu");
 }
 
 
 //chargement de l'image
 preload()
 {
-    this.load.image('menu', 'assets/menu.png')
+    this.load.image('menu', 'assets/menu.png');
 
 }
 
 
     create()
 {
+    this.add.image(640, 360, 'menu');
 
 }
     update()
