@@ -18,6 +18,12 @@ preload()
         this.load.image('super_orbe', 'assets/super_orbe.png');
         this.load.image('bloc', 'assets/bloc_collider.png');
         this.load.image('potion', 'assets/potion.png');
+        this.load.image('vie_3hp', 'assets/vie3.png');
+        this.load.image('vie_2hp', 'assets/vie2.png');
+        this.load.image('vie_1hp', 'assets/vie1.png');
+        this.load.image('vie_0hp', 'assets/vie_vide.png');
+
+
 }
 
 
@@ -114,9 +120,11 @@ preload()
             frames: [{key: 'dude', frame: 18}],
         });
     
-        this.cameras.main.setBounds(0, 0, 1920, 1080);
-        this.cameras.main.setSize(1280, 720);
-        this.cameras.main.startFollow(this.player);
+    this.cameras.main.setBounds(0, 0, 1920, 1080);
+    this.cameras.main.setSize(1280, 720);
+    this.cameras.main.startFollow(this.player);
+    
+    this.hp = this.add.image(1100, 50, "vie_3hp").setScrollFactor(0);
     
     this.physics.add.overlap(this.player, this.clef_grise, this.getClef, null, this);
     this.physics.add.overlap(this.player, this.orbe, this.getOrbe, null, this);
@@ -203,7 +211,21 @@ preload()
         }
     }
     
-    if(vie == 0){
+    if (vie == 3){
+       this.hp.setTexture("vie_3hp");
+        
+    }
+    else if (vie == 2){
+        this.hp.setTexture("vie_2hp" );
+        
+    }
+    
+    else if (vie == 1){
+        this.hp.setTexture("vie_1hp");
+    }
+    
+    else if (vie == 0){
+        this.hp.setTexture("vie_0hp");
         this.physics.pause();
         game_over = true;
     }
