@@ -5,11 +5,8 @@
     <title>Ruines</title>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
     <script type="text/javascript" src="menu.js"></script>
-    <script type="text/javascript" src="zone1.js"></script>
-    <script type="text/javascript" src="zone2.js"></script>
-    <script type="text/javascript" src="zone3.js"></script>
-    <script type="text/javascript" src="zone4.js"></script>
-    <script type="text/javascript" src="donjon.js"></script>
+    <script type="text/javascript" src="scene1.json"></script>
+    <script type="text/javascript" src="scene2.json"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -37,9 +34,23 @@
         },
     };
 
-    function create(){
+
+//Déclaration des variables
+
+function preload()
+{
+
+}
+
+function create()
+{
         this.scene.start("menu");
-    }
+}
+
+function update ()
+{
+
+}
 
 </script>
 </body>
