@@ -1,0 +1,9 @@
+Contrôles clavier : 
+
+Flèches directionnelles pour avancer.
+Espace pour tirer un projectile après l'avoir ramassé.
+Clique de la souris pour quitter le menu d'accueil. 
+
+Contrôles manette : 
+Flèches directionnelles pour avancer.
+A pour tirer.
