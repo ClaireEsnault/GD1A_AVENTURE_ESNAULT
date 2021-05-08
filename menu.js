@@ -17,7 +17,15 @@ preload()
 {
     this.add.image(640, 360, 'menu');
 
+
+    this.input.once('pointerdown', function (event) {
+
+            this.scene.start('Scene1');
+
+        }, this);
+
 }
+
     update()
 {
 
